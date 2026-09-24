@@ -4,7 +4,7 @@ import plotly.express as px
 import re
 
 # Configuração da página
-st.set_page_config(page_title="Dashboard de Entrevistas", layout="wide")
+st.set_page_config(page_title="Entrevistas", layout="wide")
 
 # Funções de limpeza
 def clean_languages(text):
@@ -58,8 +58,8 @@ def load_data():
 df_full, df_interview = load_data()
 
 # Título e Métricas
-st.title("🎧 Dashboard - Candidatos para Entrevista")
-st.markdown("Visualização interativa focada nos candidatos que **aceitaram** participar da entrevista.")
+st.title("Candidatos para Entrevista")
+st.markdown("Candidatos que **aceitaram** participar da entrevista.")
 
 col1, col2, col3 = st.columns(3)
 col1.metric("Total de Respostas", len(df_full))
